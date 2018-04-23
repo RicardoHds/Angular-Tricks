@@ -1,0 +1,23 @@
+/* Clases to create a sequential list. Example: 1 1.1 1.2 2 2.1 */
+.list-num{
+	counter-reset: item; 
+	list-style-type: none;
+}
+
+.list-num li{ 
+	display: block; 
+	padding: 3px;
+	position:relative ;
+}
+
+.list-num li:before{ 
+	content: counters(item, ".") ". "; 
+	counter-increment: item;
+	color: #B5282E;
+	position: absolute;
+	left: -20px;
+}
+
+.list-num li .list-num li:before{
+	left: -40px;
+}
